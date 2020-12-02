@@ -2,7 +2,7 @@
 
 The BMCOP is a Coil On Plug Project made with Arduino Nano V3 for Honda/Acura running on OBD1 ecus and with a distributor.
 
-***This project are still in Developpement, prototyping it is completly at your own risk!*
+** *This project are still in Developpement, prototyping it is completly at your own risk!* **
 
 # Introduction
 
