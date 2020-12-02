@@ -23,6 +23,8 @@ The Project (mostly due to schematic design) can only drive 5V coils for now (us
 - 1x 78M05
 - 1x 1N4002 (1N4004, 2N4148 and others diodes above 20V rating will works just as fine for a replacement!)
 
+**In the Schematic 1N4002 take place of SS12**
+
 
 # Possible Issues
 
