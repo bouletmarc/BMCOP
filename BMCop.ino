@@ -17,7 +17,7 @@ It activate 4x Digital ouputs pins (used to trigger the coils) depending on whic
 #include <digitalWriteFast.h>
 
 // MODIFIABLE PARAMETERS VARS
-bool WastedSpark        = true;        //wasted spark fire each cylinders on 2x of the 4x stroke rather than only 1x stroke
+//bool WastedSpark        = true;        //wasted spark fire each cylinders on 2x of the 4x stroke rather than only 1x stroke
 bool InternalDWellTime  = false;         //set time to true to spark the coils for the internal DWell time or to false to use the 'external' DWell time incoming from the interrupt
 //int MAXDWELL            = 2900;         //Maximum DWell in Microseconds (Sparking time for coils), this value enter in count only if using the Internal DWell Time
 //int MINDWELL            = 2100;         //Minimum DWell in Microseconds (Sparking time for coils), this value enter in count only if using the Internal DWell Time
@@ -28,17 +28,17 @@ const byte fireOrder[]  = {1, 3, 4, 2}; //Basicly the firing order 1-3-4-2 can i
 //const byte fireOrder[]  = {2, 1, 3, 4}; //Basicly the firing order 1-3-4-2 can it be offseted!
 
 // MODIFIABLE OUTPUT PINS (just make sure you aren't using a pins listed in the Inputs Pins bellow
-const byte CoilP1 = 5;      //Atmega328P=5  ATTiny44=3
-const byte CoilP2 = 6;      //Atmega328P=6  ATTiny44=4
-const byte CoilP3 = 7;      //Atmega328P=7  ATTiny44=5
-const byte CoilP4 = 8;      //Atmega328P=8  ATTiny44=6
-const byte Status = 10;      //Atmega328P=10  ATTiny44=8
+const byte CoilP1 = 3;      //Atmega328P=5  ATTiny44=3
+const byte CoilP2 = 4;      //Atmega328P=6  ATTiny44=4
+const byte CoilP3 = 5;      //Atmega328P=7  ATTiny44=5
+const byte CoilP4 = 6;      //Atmega328P=8  ATTiny44=6
+//const byte Status = 10;      //Atmega328P=10  ATTiny44=8
 
 //#############################################################################################################
 // INPUT PINS (DO NOT MODIFY, INPUT PINS ARE SPECIFIC FOR THE INTERRUPTS AND OTHER IMPORTANT FUNCTIONS)
 const byte CYP = 2;         //Atmega328P=2  ATTiny44=1
 const byte IGN = 3;         //Atmega328P=3  ATTiny44=2
-const byte WastedSparkIn = 9;//Atmega328P=9  ATTiny44=7
+//const byte WastedSparkIn = 9;//Atmega328P=9  ATTiny44=7
 //const byte IntDWellIn = 11; //Atmega328P=9  ATTiny44=7
 
 // VARS (DO NOT MODIFY)
@@ -74,12 +74,12 @@ void setup() {
   pinModeFast(CoilP2, OUTPUT);
   pinModeFast(CoilP3, OUTPUT);
   pinModeFast(CoilP4, OUTPUT);
-  pinModeFast(Status, OUTPUT);
+  //pinModeFast(Status, OUTPUT);
 
   //Set Inputs
   pinMode(CYP, INPUT);
   pinMode(IGN, INPUT);
-  pinMode(WastedSparkIn, INPUT_PULLUP);
+  //pinMode(WastedSparkIn, INPUT_PULLUP);
   //pinMode(IntDWellIn, INPUT_PULLUP);
 
   //Attach Interrupts
@@ -268,12 +268,12 @@ void loop() {
 
 //###############################################################
 void SetLED() {
-  if (desynced){
+  /*if (desynced){
     digitalWriteFast(Status, LOW);
   }
   if (!desynced){
     digitalWriteFast(Status, HIGH);
-  }
+  }*/
 }
 
 void FIRE_COIL1(){
