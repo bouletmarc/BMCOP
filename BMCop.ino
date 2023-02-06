@@ -71,7 +71,10 @@ int SyncCount           = 0;
 int SyncCountICM        = 0;
 int LastSyncCount       = 0;
 int DesyncCount         = 0;
+int SyncMode            = 0;
 const int MaxDesyncTime = 500; //max desync timer in milliseconds
+
+int LogsyncCount         = 0;
 
 // VARS FOR RPM SERIAL LOGGING
 //uint8_t SPARKS          = 0;
@@ -115,19 +118,24 @@ void loop() {
 
   //Calucalute average DWell time with Engine RPM
   //DWELL_INTERNAL  = map(RPM, 0, 11000, MAXDWELL, MINDWELL);
+
+  //Serial.println("SyncCount=" + String(SyncCount) + ", SyncCountICM=" + String(SyncCountICM) + ", LogsyncCount=" + String(LogsyncCount));
 }
 
 void CalculateIsSynced() {
-  if (!desynced) {
-    if (LastSyncCount == SyncCount) {
+  //if (!desynced) {
+    if (SyncCount == LastSyncCount) {
       DesyncCount++;
+    }
+    if (SyncCount != LastSyncCount) {
+      DesyncCount = 0;
     }
     if (DesyncCount >= MaxDesyncTime) {
       SetDecynced();
     }
     
     LastSyncCount = SyncCount;
-  }
+  //}
 }
 
 void SetDecynced() {
@@ -138,6 +146,7 @@ void SetDecynced() {
   SyncCountICM = 0;
   DesyncCount = 0;
   LastSyncCount = 0;
+  SyncMode = 0;
 }
 
 //###############################################################
@@ -206,14 +215,10 @@ void Ignite_Off() {
 // INTERRUPTS FC1 AND ICM INPUTS
 //###############################################################
 void ISR_FC1_Pin3() {
-  if (desynced) {
-    CYLINDER = 0;
-    SyncCount++;
-  }
-  else
+  SyncCount++;
+    
+  if (!desynced)
   {
-    SyncCount++;
-
     //Increase Cylinder firing on the 5th FC1 pulse, prepare it for when the next ICM pulse will fire.
     //If the ignition degree are negative, the ICM will pulse slightly before the 6th FC1 pulse, better prepare it in advance on the 5th pulse!
     if (SyncCount == 5)
@@ -236,29 +241,48 @@ void ISR_ICM_Pin() {
   //START SYNC SEQUENCE
   if (desynced)
   {
-    //AFTER 5-6x FC1 PULSE
-    if (SyncCountICM == 0 && (SyncCount == 5 || SyncCount == 6))
+    //AFTER UNKNOWN FC1 PULSE
+    if (SyncCountICM == 0 && SyncCount > 0)
     {
       SyncCountICM++;
       SyncCount = 0;
     }
-    //AFTER 11-12x FC1 PULSE
-    if (SyncCountICM == 1 && (SyncCount == 11 || SyncCount == 12))
+    //AFTER 5-6 or 11-12x FC1 PULSE
+    if (SyncCountICM == 1 && (SyncCount == 5 || SyncCount == 6 || SyncCount == 11 || SyncCount == 12))
     {
       SyncCountICM++;
       SyncCount = 0;
+      if (SyncCount == 5 || SyncCount == 6) {
+        SyncMode = 1;
+      }
     }
-    //AFTER 3-4x FC1 PULSE
-    if (SyncCountICM == 2 && (SyncCount == 3 || SyncCount == 4))
-    {
-      SyncCountICM++;
-      SyncCount = 0;
-      CYLINDER = 1;
-      desynced = false;
+    //AFTER UNKNOWN FC1 PULSE
+    if (SyncMode == 0) {
+      if (SyncCountICM == 2 && SyncCount > 0)
+      {
+        SyncCountICM++;
+        SyncCount = 0;
+        CYLINDER = 1;
+        desynced = false;
+      }
+    }
+    
+    if (SyncMode == 1) {
+      if (SyncCountICM <= 4 && (SyncCount == 5 || SyncCount == 6))
+      {
+        SyncCountICM++;
+        SyncCount = 0;
+      }
+      if (SyncCountICM == 5 && SyncCount > 0) {
+        SyncCountICM++;
+        SyncCount = 0;
+        CYLINDER = 1;
+        desynced = false;
+      }
     }
   }
   
-  if(!desynced && CYLINDER > 0) {
+  if(!desynced) {
     //Fire the specific Cylinder Coil
     Ignite_ON();
 
@@ -316,8 +340,9 @@ ISR(TIMER1_COMPA_vect) {
   //Turn off interrupts since we use Serial commands, this also ensure we calculate the RPM when nothing trigger the interrupts (interrupts turned off)
   noInterrupts();
 
-  GetRPM();
-  Serial.println("RPM: " + String(RPM) + "rpm");
+  //GetRPM();
+  //Serial.println("RPM: " + String(RPM) + "rpm");
+  Serial.println("SyncCount=" + String(SyncCount) + ", SyncCountICM=" + String(SyncCountICM) + ", LogsyncCount=" + String(LogsyncCount));
 
   //Attach again the interrupts since we finished calculating RPM and possibly sending Serial datas
   attachInterrupt(digitalPinToInterrupt(FC1_Pin3), ISR_FC1_Pin3, FALLING);
