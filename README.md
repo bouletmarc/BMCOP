@@ -46,7 +46,7 @@ __*If you acheive successfull results*__
 I'll surely appreciate to get informed of the changes done the the programming codes or the schematic if there is any, and if you would like, you could participate in the developpement of this project by subscribing to Github and yourself 'Push updates request' to this project! I am willing to share Open Source the project I ended up with before selling the only car I could have tested on, please be kindful and let's make this a working Open Source project together.
 
 # BMCOP V1.3 Schematic/Diagram
-![alt tag](https://github.com/bouletmarc/BMCOP/blob/main/eagle_1eO5gZZhDL.png)
+![alt tag](https://github.com/bouletmarc/BMCOP/blob/main/eagle.png)
 
 # BMCOP V1.2 Schematic/Diagram
 ![alt tag](https://github.com/bouletmarc/BMCOP/blob/main/eagle_2020-12-02_09-09-23.png)
