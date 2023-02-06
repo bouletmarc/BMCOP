@@ -39,9 +39,9 @@ The BMCOP need 2x Signal Inputs pins to acheive triggering all the four(4x) Coil
 
 __*The Project is for use at your OWN COMPLETE RISK, IT HAS NOT BEING TESTED/CONFIRMED*__
 
-__*If you acheive successfull results*__
-
 The project has been updated for the V1.3 boards, which now use a different signal for syncing coils (before it was using FC1 pin4, now i've updated the project to use FC1 pin3 signal). It has not been tested personnally since I don't have any cars/engines capable of testing the project on hands, but it should be more confident this time to works arround with it.
+
+__*If you acheive successfull results*__
 
 I'll surely appreciate to get informed of the changes done the the programming codes or the schematic if there is any, and if you would like, you could participate in the developpement of this project by subscribing to Github and yourself 'Push updates request' to this project! I am willing to share Open Source the project I ended up with before selling the only car I could have tested on, please be kindful and let's make this a working Open Source project together.
 
