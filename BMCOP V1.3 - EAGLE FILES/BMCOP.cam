@@ -1,0 +1,263 @@
+{
+    "author": {
+        "email": "bouletmarc@hotmail.com",
+        "name": "Marc-Andre Boulet"
+    },
+    "description": {
+        "EN": "CAM job description goes here."
+    },
+    "output_type": "zip",
+    "outputs": [
+        {
+            "format_specifier": {
+                "decimal": 3,
+                "integer": 3
+            },
+            "output_type": "drill",
+            "outputs": [
+                {
+                    "drills": {
+                        "NPTH": true,
+                        "PTH": true,
+                        "VIA": true
+                    },
+                    "filename_format": "%N.TXT",
+                    "layers": {
+                        "from": 1,
+                        "to": 16
+                    },
+                    "name": "Drills and Holes",
+                    "type": "excellon"
+                }
+            ]
+        },
+        {
+            "filename_prefix": "gerber",
+            "format_specifier": {
+                "decimal": 4,
+                "integer": 3
+            },
+            "generate_job_file": true,
+            "output_type": "gerber",
+            "outputs": [
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": false,
+                    "config": {
+                        "description": "Slot drill/holes/outline",
+                        "file_function": "Other"
+                    },
+                    "filename_format": "%N.GML",
+                    "layers": [
+                        20,
+                        46
+                    ],
+                    "milling": false,
+                    "name": "Slot drill/holes/outline",
+                    "polarity": "positive",
+                    "type": "gerber_layer"
+                },
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": false,
+                    "config": {
+                        "description": "Bottom solder paste for stencil",
+                        "file_function": "Other"
+                    },
+                    "filename_format": "%N.GBP",
+                    "layers": [
+                        20,
+                        32
+                    ],
+                    "milling": false,
+                    "name": "Bottom solder paste for stencil",
+                    "polarity": "positive",
+                    "type": "gerber_layer"
+                },
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": false,
+                    "config": {
+                        "description": "Bottom solder mask",
+                        "file_function": "Other"
+                    },
+                    "filename_format": "%N.GBS",
+                    "layers": [
+                        20,
+                        30
+                    ],
+                    "milling": false,
+                    "name": "Bottom solder mask",
+                    "polarity": "positive",
+                    "type": "gerber_layer"
+                },
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": false,
+                    "config": {
+                        "description": "Bottom silk",
+                        "file_function": "Other"
+                    },
+                    "filename_format": "%N.GBO",
+                    "layers": [
+                        20,
+                        122
+                    ],
+                    "milling": false,
+                    "name": "Bottom silk",
+                    "polarity": "positive",
+                    "type": "gerber_layer"
+                },
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": false,
+                    "config": {
+                        "description": "Bottom copper",
+                        "file_function": "Other"
+                    },
+                    "filename_format": "%N.GBL",
+                    "layers": [
+                        16,
+                        17,
+                        18,
+                        20
+                    ],
+                    "milling": false,
+                    "name": "Bottom copper",
+                    "polarity": "positive",
+                    "type": "gerber_layer"
+                },
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": false,
+                    "config": {
+                        "description": "Top solder paste for stencil",
+                        "file_function": "Other"
+                    },
+                    "filename_format": "%N.GTP",
+                    "layers": [
+                        20,
+                        31
+                    ],
+                    "milling": false,
+                    "name": "Top solder paste for stencil",
+                    "polarity": "positive",
+                    "type": "gerber_layer"
+                },
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": false,
+                    "config": {
+                        "description": "Top solder mask",
+                        "file_function": "Other"
+                    },
+                    "filename_format": "%N.GTS",
+                    "layers": [
+                        20,
+                        29
+                    ],
+                    "milling": false,
+                    "name": "Top solder mask",
+                    "polarity": "positive",
+                    "type": "gerber_layer"
+                },
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": false,
+                    "config": {
+                        "description": "Top silk",
+                        "file_function": "Other"
+                    },
+                    "filename_format": "%N.GTO",
+                    "layers": [
+                        20,
+                        112,
+                        121
+                    ],
+                    "milling": false,
+                    "name": "Top silk",
+                    "polarity": "positive",
+                    "type": "gerber_layer"
+                },
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": false,
+                    "config": {
+                        "description": "Top copper",
+                        "file_function": "Other"
+                    },
+                    "filename_format": "%N.GTL",
+                    "layers": [
+                        1,
+                        17,
+                        18,
+                        20
+                    ],
+                    "milling": false,
+                    "name": "Top copper",
+                    "polarity": "positive",
+                    "type": "gerber_layer"
+                }
+            ],
+            "version": "X2"
+        }
+    ],
+    "timestamp": "2019-08-22T20:43:49",
+    "type": "EAGLE CAM job",
+    "units": "metric",
+    "version": "8.6.0"
+}
