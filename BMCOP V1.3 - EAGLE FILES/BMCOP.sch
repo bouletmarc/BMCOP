@@ -7176,8 +7176,6 @@ Each pin can provide or receive a maximum of 40 mA and has an internal pull-up r
 <part name="P+1" library="SparkFun" deviceset="VCC" device=""/>
 <part name="JP1" library="pinhead_MOD" deviceset="PINHD-1X1" device="" package3d_urn="urn:adsk.eagle:package:22485/2"/>
 <part name="R1" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/2" value="1k"/>
-<part name="R2" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/2" value="1k"/>
-<part name="R3" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/2" value="1k"/>
 <part name="R4" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/2" value="1k"/>
 <part name="D1" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="DIODE-" device="D-7.5" package3d_urn="urn:adsk.eagle:package:43423/1" value="2N4148"/>
 <part name="D3" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="DIODE-" device="D-7.5" package3d_urn="urn:adsk.eagle:package:43423/1" value="2N4148 x4"/>
@@ -7189,7 +7187,6 @@ Each pin can provide or receive a maximum of 40 mA and has an internal pull-up r
 <part name="JP6" library="pinhead_MOD" deviceset="PINHD-1X1" device="" package3d_urn="urn:adsk.eagle:package:22485/2"/>
 <part name="JP7" library="pinhead_MOD" deviceset="PINHD-1X1" device="" package3d_urn="urn:adsk.eagle:package:22485/2"/>
 <part name="JP8" library="pinhead_MOD" deviceset="PINHD-1X1" device="" package3d_urn="urn:adsk.eagle:package:22485/2"/>
-<part name="GND2" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -7248,14 +7245,6 @@ Connect to FC1 Pin1</text>
 <attribute name="NAME" x="288.0614" y="-3.81" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="292.862" y="-3.81" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="R2" gate="G$1" x="271.78" y="0" smashed="yes" rot="R90">
-<attribute name="NAME" x="270.2814" y="-3.81" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="275.082" y="-3.81" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="R3" gate="G$1" x="264.16" y="0" smashed="yes" rot="R90">
-<attribute name="NAME" x="262.6614" y="-3.81" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="267.462" y="-3.81" size="1.778" layer="96" rot="R90"/>
-</instance>
 <instance part="R4" gate="G$1" x="281.94" y="0" smashed="yes" rot="R90">
 <attribute name="NAME" x="280.4414" y="-3.81" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="285.242" y="-3.81" size="1.778" layer="96" rot="R90"/>
@@ -7300,9 +7289,6 @@ Connect to FC1 Pin1</text>
 <attribute name="NAME" x="267.335" y="-3.81" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="259.08" y="-3.81" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="GND2" gate="1" x="271.78" y="-7.62" smashed="yes">
-<attribute name="VALUE" x="269.24" y="-10.16" size="1.778" layer="96"/>
-</instance>
 </instances>
 <busses>
 </busses>
@@ -7335,10 +7321,6 @@ Connect to FC1 Pin1</text>
 <segment>
 <pinref part="ARDUINO_NANO1" gate="G$1" pin="GND@2"/>
 <pinref part="GND7" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="R2" gate="G$1" pin="1"/>
-<pinref part="GND2" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -7394,17 +7376,6 @@ Connect to FC1 Pin1</text>
 <pinref part="JP6" gate="G$1" pin="1"/>
 </segment>
 </net>
-<net name="N$14" class="0">
-<segment>
-<pinref part="ARDUINO_NANO1" gate="G$1" pin="D2"/>
-<wire x1="264.16" y1="12.7" x2="246.38" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="264.16" y1="5.08" x2="264.16" y2="12.7" width="0.1524" layer="91"/>
-<pinref part="R3" gate="G$1" pin="2"/>
-<pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="271.78" y1="5.08" x2="264.16" y2="5.08" width="0.1524" layer="91"/>
-<junction x="264.16" y="5.08"/>
-</segment>
-</net>
 <net name="N$11" class="0">
 <segment>
 <pinref part="ARDUINO_NANO1" gate="G$1" pin="D3"/>
@@ -7439,9 +7410,10 @@ Connect to FC1 Pin1</text>
 </net>
 <net name="N$29" class="0">
 <segment>
-<wire x1="264.16" y1="-7.62" x2="264.16" y2="-5.08" width="0.1524" layer="91"/>
-<pinref part="R3" gate="G$1" pin="1"/>
 <pinref part="JP8" gate="G$1" pin="1"/>
+<pinref part="ARDUINO_NANO1" gate="G$1" pin="D2"/>
+<wire x1="264.16" y1="12.7" x2="246.38" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="264.16" y1="-7.62" x2="264.16" y2="12.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

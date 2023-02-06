@@ -203,7 +203,7 @@
 <dimension x1="59.66" y1="5.406" x2="59.784" y2="40.386" x3="73.395853125" y3="22.847528125" textsize="1.778" layer="37"/>
 <dimension x1="5.08" y1="0" x2="8.586" y2="0" x3="6.833" y3="-10.494" textsize="1.778" layer="37"/>
 <dimension x1="59.466" y1="0" x2="55.968" y2="0" x3="57.717" y3="-9.222" textsize="1.778" layer="37"/>
-<text x="19.398" y="24.645" size="1.016" layer="122" rot="SMR90" align="center-right">FC1 Pin3</text>
+<text x="21.942" y="24.645" size="1.016" layer="122" rot="SMR90" align="center-right">FC1 Pin3</text>
 <wire x1="76.002" y1="19.08" x2="86.019" y2="19.08" width="0.1524" layer="37"/>
 <wire x1="86.019" y1="19.08" x2="86.019" y2="15.423" width="0.1524" layer="37"/>
 <wire x1="86.019" y1="15.423" x2="76.002" y2="15.423" width="0.1524" layer="37"/>
@@ -286,8 +286,6 @@
 <wire x1="37.047" y1="14.787" x2="35.616" y2="14.787" width="0.2032" layer="112"/>
 <text x="14.628" y="8.904" size="1.016" layer="121" rot="SR90" align="center">1K</text>
 <text x="17.013" y="8.745" size="1.016" layer="121" rot="SR90" align="center">1K</text>
-<text x="19.398" y="8.904" size="1.016" layer="121" rot="SR90" align="center">1K</text>
-<text x="21.783" y="8.904" size="1.016" layer="121" rot="SR90" align="center">1K</text>
 <wire x1="13.674" y1="6.678" x2="13.674" y2="11.13" width="0.2032" layer="112"/>
 <wire x1="13.674" y1="11.13" x2="13.992" y2="11.448" width="0.2032" layer="112"/>
 <wire x1="13.992" y1="11.448" x2="15.264" y2="11.448" width="0.2032" layer="112"/>
@@ -304,23 +302,7 @@
 <wire x1="17.967" y1="6.519" x2="17.649" y2="6.201" width="0.2032" layer="112"/>
 <wire x1="17.649" y1="6.201" x2="16.377" y2="6.201" width="0.2032" layer="112"/>
 <wire x1="16.377" y1="6.201" x2="16.059" y2="6.519" width="0.2032" layer="112"/>
-<wire x1="18.444" y1="6.678" x2="18.444" y2="11.13" width="0.2032" layer="112"/>
 <wire x1="18.444" y1="11.13" x2="18.762" y2="11.448" width="0.2032" layer="112"/>
-<wire x1="18.762" y1="11.448" x2="20.034" y2="11.448" width="0.2032" layer="112"/>
-<wire x1="20.034" y1="11.448" x2="20.352" y2="11.13" width="0.2032" layer="112"/>
-<wire x1="20.352" y1="11.13" x2="20.352" y2="6.678" width="0.2032" layer="112"/>
-<wire x1="20.352" y1="6.678" x2="20.034" y2="6.36" width="0.2032" layer="112"/>
-<wire x1="20.034" y1="6.36" x2="18.762" y2="6.36" width="0.2032" layer="112"/>
-<wire x1="18.762" y1="6.36" x2="18.444" y2="6.678" width="0.2032" layer="112"/>
-<wire x1="20.829" y1="6.678" x2="20.829" y2="11.13" width="0.2032" layer="112"/>
-<wire x1="20.829" y1="11.13" x2="21.147" y2="11.448" width="0.2032" layer="112"/>
-<wire x1="21.147" y1="11.448" x2="22.419" y2="11.448" width="0.2032" layer="112"/>
-<wire x1="22.419" y1="11.448" x2="22.737" y2="11.13" width="0.2032" layer="112"/>
-<wire x1="22.737" y1="11.13" x2="22.737" y2="6.678" width="0.2032" layer="112"/>
-<wire x1="22.737" y1="6.678" x2="22.419" y2="6.36" width="0.2032" layer="112"/>
-<wire x1="22.419" y1="6.36" x2="21.147" y2="6.36" width="0.2032" layer="112"/>
-<wire x1="21.147" y1="6.36" x2="20.829" y2="6.678" width="0.2032" layer="112"/>
-<wire x1="23.85" y1="8.109" x2="23.85" y2="7.791" width="0.2032" layer="112"/>
 <wire x1="30.051" y1="10.812" x2="30.051" y2="10.017" width="0.2032" layer="112"/>
 <wire x1="30.051" y1="10.017" x2="30.051" y2="9.699" width="0.2032" layer="112"/>
 <wire x1="30.051" y1="9.699" x2="30.051" y2="6.996" width="0.2032" layer="112"/>
@@ -366,25 +348,25 @@
 5V D17/K20/K24 Coils</text>
 <text x="30.369" y="8.904" size="0.8128" layer="122" rot="SMR0" align="center">Prototype Board ONLY(for Developpers)
 Use at your risk OR use as Keychain!</text>
-<text x="18.126" y="3.021" size="1.016" layer="121" rot="SR0" align="center">1K</text>
-<text x="18.126" y="14.946" size="1.016" layer="121" rot="SR180" align="center">1K</text>
-<wire x1="15.423" y1="14.946" x2="13.833" y2="14.946" width="0.2032" layer="112"/>
+<text x="15.9" y="3.021" size="1.016" layer="121" rot="SR0" align="center">1K</text>
+<text x="15.741" y="14.946" size="1.016" layer="121" rot="SR180" align="center">1K</text>
+<wire x1="14.628" y1="14.946" x2="13.833" y2="14.946" width="0.2032" layer="112"/>
 <wire x1="13.833" y1="14.946" x2="12.879" y2="13.992" width="0.2032" layer="112"/>
 <wire x1="12.879" y1="13.992" x2="12.879" y2="3.816" width="0.2032" layer="112"/>
 <wire x1="12.879" y1="3.816" x2="13.674" y2="3.021" width="0.2032" layer="112"/>
-<wire x1="13.674" y1="3.021" x2="15.423" y2="3.021" width="0.2032" layer="112"/>
-<wire x1="20.829" y1="3.021" x2="22.419" y2="3.021" width="0.2032" layer="112"/>
-<wire x1="22.419" y1="3.021" x2="23.373" y2="3.975" width="0.2032" layer="112"/>
-<wire x1="23.373" y1="3.975" x2="23.373" y2="13.833" width="0.2032" layer="112"/>
-<wire x1="23.373" y1="13.833" x2="22.26" y2="14.946" width="0.2032" layer="112"/>
-<wire x1="22.26" y1="14.946" x2="20.829" y2="14.946" width="0.2032" layer="112"/>
+<wire x1="13.674" y1="3.021" x2="14.628" y2="3.021" width="0.2032" layer="112"/>
+<wire x1="17.013" y1="3.021" x2="17.808" y2="3.021" width="0.2032" layer="112"/>
+<wire x1="17.808" y1="3.021" x2="18.762" y2="3.975" width="0.2032" layer="112"/>
+<wire x1="18.762" y1="3.975" x2="18.762" y2="13.833" width="0.2032" layer="112"/>
+<wire x1="18.762" y1="13.833" x2="17.649" y2="14.946" width="0.2032" layer="112"/>
+<wire x1="17.649" y1="14.946" x2="16.854" y2="14.946" width="0.2032" layer="112"/>
 <text x="26.553" y="8.904" size="1.016" layer="121" rot="SR90" align="center">2N4148 x4</text>
-<text x="11.766" y="8.904" size="1.016" layer="121" rot="SR90" align="center">1K Resistor x4</text>
+<text x="11.766" y="8.904" size="1.016" layer="121" rot="SR90" align="center">1K Resistor x2</text>
 <text x="11.766" y="24.645" size="1.016" layer="121" rot="SR90" align="center-right">GND</text>
 <text x="14.31" y="24.645" size="1.016" layer="121" rot="SR90" align="center-right">5V</text>
 <text x="16.854" y="24.645" size="1.016" layer="121" rot="SR90" align="center-right">RPM OUT</text>
-<text x="19.398" y="24.645" size="1.016" layer="121" rot="SR90" align="center-right">PULSE1</text>
-<text x="21.942" y="24.645" size="1.016" layer="121" rot="SR90" align="center-right">PULSE2</text>
+<text x="21.942" y="24.645" size="1.016" layer="121" rot="SR90" align="center-right">PULSE1</text>
+<text x="19.398" y="24.645" size="1.016" layer="121" rot="SR90" align="center-right">PULSE2</text>
 <text x="27.03" y="24.645" size="1.016" layer="121" rot="SR90" align="center-right">COIL3</text>
 <text x="29.574" y="24.645" size="1.016" layer="121" rot="SR90" align="center-right">COIL2</text>
 <text x="24.486" y="24.645" size="1.016" layer="121" rot="SR90" align="center-right">COIL4</text>
@@ -393,7 +375,7 @@ Use at your risk OR use as Keychain!</text>
 <text x="7.155" y="8.904" size="1.016" layer="121" rot="SR270" align="center">Arduino Nano V3 (5v)
 On Top</text>
 <text x="11.766" y="24.645" size="1.016" layer="122" rot="SMR90" align="center-right">FC1 Pin1</text>
-<text x="21.942" y="24.645" size="1.016" layer="122" rot="SMR90" align="center-right">FC1 Pin4</text>
+<text x="19.398" y="24.645" size="1.016" layer="122" rot="SMR90" align="center-right">ICM (A21)</text>
 <text x="14.31" y="24.645" size="1.016" layer="122" rot="SMR90" align="center-right">FC1 Pin12</text>
 <text x="16.854" y="24.645" size="1.016" layer="122" rot="SMR90" align="center-right">Tacho</text>
 </plain>
@@ -1869,14 +1851,6 @@ Based on the following sources:
 <attribute name="NAME" x="18.3084" y="11.444" size="0.9906" layer="25" ratio="10" rot="R270"/>
 <attribute name="VALUE" x="16.5304" y="10.5296" size="0.9906" layer="27" ratio="10" rot="R270"/>
 </element>
-<element name="R2" library="resistor" library_urn="urn:adsk.eagle:library:348" package="0204/7" package3d_urn="urn:adsk.eagle:package:23498/2" value="1k" x="19.398" y="8.904" smashed="yes" rot="R270">
-<attribute name="NAME" x="20.6934" y="11.444" size="0.9906" layer="25" ratio="10" rot="R270"/>
-<attribute name="VALUE" x="18.9154" y="10.5296" size="0.9906" layer="27" ratio="10" rot="R270"/>
-</element>
-<element name="R3" library="resistor" library_urn="urn:adsk.eagle:library:348" package="0204/7" package3d_urn="urn:adsk.eagle:package:23498/2" value="1k" x="21.783" y="8.904" smashed="yes" rot="R270">
-<attribute name="NAME" x="23.0784" y="11.444" size="0.9906" layer="25" ratio="10" rot="R270"/>
-<attribute name="VALUE" x="21.3004" y="10.5296" size="0.9906" layer="27" ratio="10" rot="R270"/>
-</element>
 <element name="R4" library="resistor" library_urn="urn:adsk.eagle:library:348" package="0204/7" package3d_urn="urn:adsk.eagle:package:23498/2" value="1k" x="14.628" y="8.904" smashed="yes" rot="R270">
 <attribute name="NAME" x="15.9234" y="11.444" size="0.9906" layer="25" ratio="10" rot="R270"/>
 <attribute name="VALUE" x="14.1454" y="10.5296" size="0.9906" layer="27" ratio="10" rot="R270"/>
@@ -1940,10 +1914,6 @@ Based on the following sources:
 <wire x1="36.868" y1="1.284" x2="36.868" y2="2.882" width="0.508" layer="16"/>
 <wire x1="36.868" y1="2.882" x2="36.729" y2="3.021" width="0.508" layer="16"/>
 <wire x1="13.992" y1="3.021" x2="36.729" y2="3.021" width="0.508" layer="16"/>
-<contactref element="R2" pad="1"/>
-<wire x1="19.398" y1="12.714" x2="19.398" y2="12.084" width="0.508" layer="16"/>
-<wire x1="17.808" y1="10.494" x2="12.72" y2="10.494" width="0.508" layer="16"/>
-<wire x1="19.398" y1="12.084" x2="17.808" y2="10.494" width="0.508" layer="16"/>
 </signal>
 <signal name="VCC">
 <contactref element="ARDUINO_NANO1" pad="12"/>
@@ -2036,14 +2006,6 @@ Based on the following sources:
 <wire x1="32.118" y1="21.147" x2="35.616" y2="17.649" width="0.508" layer="1"/>
 <wire x1="32.118" y1="26.235" x2="32.118" y2="21.147" width="0.508" layer="1"/>
 </signal>
-<signal name="N$14">
-<contactref element="ARDUINO_NANO1" pad="20"/>
-<contactref element="R3" pad="2"/>
-<contactref element="R2" pad="2"/>
-<wire x1="19.398" y1="5.094" x2="21.783" y2="5.094" width="0.508" layer="1"/>
-<wire x1="29.248" y1="16.524" x2="21.783" y2="9.059" width="0.508" layer="16"/>
-<wire x1="21.783" y1="9.059" x2="21.783" y2="5.094" width="0.508" layer="16"/>
-</signal>
 <signal name="N$11">
 <contactref element="ARDUINO_NANO1" pad="21"/>
 <contactref element="R4" pad="2"/>
@@ -2079,16 +2041,10 @@ Based on the following sources:
 <wire x1="15.264" y1="17.649" x2="19.398" y2="21.783" width="0.508" layer="1"/>
 </signal>
 <signal name="N$29">
-<contactref element="R3" pad="1"/>
 <contactref element="JP8" pad="1"/>
-<wire x1="21.783" y1="12.714" x2="21.783" y2="12.75136875" width="0.508" layer="16"/>
-<wire x1="21.783" y1="12.75136875" x2="19.890684375" y2="14.643684375" width="0.508" layer="16"/>
-<wire x1="19.890684375" y1="14.643684375" x2="18.936684375" y2="14.643684375" width="0.508" layer="16"/>
-<wire x1="18.936684375" y1="14.643684375" x2="18.921" y2="14.628" width="0.508" layer="16"/>
-<wire x1="21.942" y1="21.624" x2="21.942" y2="26.235" width="0.508" layer="16"/>
-<wire x1="18.921" y1="14.628" x2="17.808" y2="15.741" width="0.508" layer="16"/>
-<wire x1="17.808" y1="15.741" x2="17.808" y2="17.49" width="0.508" layer="16"/>
-<wire x1="17.808" y1="17.49" x2="21.942" y2="21.624" width="0.508" layer="16"/>
+<contactref element="ARDUINO_NANO1" pad="20"/>
+<wire x1="29.248" y1="16.524" x2="21.942" y2="23.83" width="0.508" layer="16"/>
+<wire x1="21.942" y1="23.83" x2="21.942" y2="26.235" width="0.508" layer="16"/>
 </signal>
 <signal name="VIN">
 <contactref element="ARDUINO_NANO1" pad="15"/>
