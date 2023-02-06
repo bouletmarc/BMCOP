@@ -22,11 +22,12 @@ The BMCOP need 2x Signal Inputs pins to acheive triggering all the four(4x) Coil
 
 # Parts required to assembled the Prototype PCB
 
-- 4x 1K Ohm 1/6W Resistor
+- 2x 1K Ohm 1/6W Resistor
 - 4x 2N4148 Diode
 - 1x Arduino Nano V3 - 5V - 16Mhz
 
 (required ONLY for the v1.2 and older)
+- 2x more 1K Ohm 1/6W Resistor
 - 1x 100nF (0.1uF) Capacitor
 *If you want to Power the Device with 12V:*
 - 1x 78M05
